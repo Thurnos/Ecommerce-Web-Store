@@ -1,0 +1,585 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
+.nav-buttons{
+    margin-left: 50%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+h1{
+    font-size:2.5rem;
+    font-weight: 700;
+
+}
+h2{
+    font-size:1.8rem;
+    font-weight: 600;
+}
+h3{
+    font-size:1.5rem;
+    font-weight: 800;
+    
+}
+h4{
+    font-size:1.2rem;
+    font-weight: 600;
+}
+h5{
+    font-size:1.0rem;
+    font-weight: 400;
+}
+h6{
+    color:#D8D8D8;
+}
+button{
+    font-size:0.8rem;
+    font-weight:900;
+    outline:none;
+    border:none;
+    background-color:#1d1d1d ;
+    color:aliceblue;
+    padding:13px 30px;
+    text-transform: uppercase;
+    cursor:pointer;
+    transition: 0.5s ease;
+
+}
+button:hover{
+    
+    background-color: aqua;
+}
+.navbar{
+    font-size:16px;
+     padding-top:2rem !important;
+     padding-bottom: 2rem !important;
+     top:0;
+     left:0;
+     box-shadow: 0 5px 10px rgba(0,0,0,0.11);
+}
+
+.navbar-light.navbar-nav .nav-link{
+    padding:0 20px;
+    color:black;
+    transition: 0.4s ease;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar i:hover,
+.navbar-light.navbar-nav .nav-link.active
+.navbar i:hover{
+     color:rgb(59, 228, 158);
+}
+
+.navbar i{
+    font-size: 1.2rem;
+    padding:0 0.7px;
+    cursor: pointer;
+    margin-left:5px;
+}
+
+@media only screen and(max-width:990px){
+
+    .nav-buttons{
+        margin:10px;
+    }
+    .nav-buttons ul{
+        margin:1rem;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
+    }
+    .nav-buttons ul .fas{
+        margin: 20px 5px 10px 20px;
+    }
+}
+
+#brand img {
+    max-height: 120px; /* Adjust the value as needed */
+    width: auto; /* Allow the width to adjust automatically */
+    margin:auto;
+    
+    cursor:pointer;
+}
+
+#new .one img{
+    width: 100%;
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#new .one{
+    position:relative;
+}
+
+#new .one .details{
+    position:absolute;
+    top:0;
+    left:0;
+    color:burlywood;
+    font-weight: bold;
+    transition:0.4s ease;
+    opacity: 0.5;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+
+}
+
+#new .one .details:hover{
+    background-color:rgb(0, 121, 121);
+}
+
+#new .one:nth-child(1) .details{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+}
+
+#new .one:nth-child(2) .details{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+}
+
+#new .one:nth-child(3) .details{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+}
+
+#home{
+    background-image: url('../imgs/back.jpg');
+    width: 100%;
+    height:100vh;
+    background-size: cover;  
+    background-position-y:100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#home span{
+    color: aqua;
+}
+
+/* Product */
+.product {
+    cursor: pointer;
+    margin-bottom: 2rem;
+    position: relative;
+    
+}
+
+.product img {
+    transition: 0.3s all;
+}
+
+.product:hover img {
+    position: relative;
+    color: burlywood;
+    font-weight: bold;
+    transition: 0.4s ease;
+    opacity: 0.5;
+    background-color: rgb(135, 238, 238);
+}
+.product .buy-button {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.product:hover .buy-button {
+    display: block;
+}
+
+hr{
+    width: 30px;
+    height: 3px !important;
+    opacity: 1 !important;
+    background-color: lightcyan;
+}
+
+.star{
+    padding: 10px 0;
+}
+.star i{
+    font-size:0.9rem;
+    color:lightcyan;
+
+}
+
+#banner{
+        background-image: url('../imgs/banner.jpg');
+        width: 100%;
+        height:60vh;
+        background-size: cover;  
+        background-position-y:80px;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+#banner h1{
+    color: #fff;
+}
+#banner h4{
+    color:#fff
+}
+#banner button{
+    background-color: lightcyan;
+}
+
+#banner button:hover{
+    background-color: #1d1d1d;
+}
+
+footer{
+    background-color: #222222;
+
+}
+footer h5{
+    color:#D8D8D8;
+    font-weight: 700;
+    font-size:1.2rem;
+
+}
+footer li{
+    padding-bottom: 4px;
+
+}
+footer li a{
+    font-size:0.8rem;
+    color:#999;
+    text-decoration: none;
+
+}
+
+footer li a:hover{
+    color:#D8D8D8;
+}
+
+footer .copyright a{
+   color:#000;
+   height: 40px;
+   width: 40px;
+   background-color: #fff;
+   display:inline-block;
+   text-align: center;
+   line-height: 38px;
+   border-radius: 50%;
+   transition: 0.3s ease;
+   margin:0 5px;
+}
+
+footer .copyright a:hover{
+    color:#fff;
+    background-color: aquamarine;
+}
+footer p{
+    color:#fff;
+}
+
+footer .copyright img{
+     width:35%;
+}
+
+.logo{
+    width: auto;
+    height:40px;
+}
+.navbar .brand {
+    margin: 3px 5px ; 
+    font-size: 1.5rem;
+}
+
+.small-img-group{
+    display:flex;
+    justify-content: space-between;
+}
+
+.small-img-col{
+    flex-basis: 24%;
+    cursor: pointer;
+
+}
+
+.single_product input{
+    width: 50px;
+    height: 40px;
+    padding-left:10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+.single_product input:focus{
+     outline:none;
+}
+
+/*Cart*/
+.cart table{
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+.cart .product-info{
+    display:flex;
+    flex-wrap: wrap;
+}
+.cart th{
+    text-align: left;
+    padding: 5px 10px;
+    color:#fff;
+    background-color:darkcyan ;
+}
+
+.cart td{
+    padding: 10px , 20px;
+}
+
+.cart td img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+.cart td input{
+    width: 40px;
+    height: 30px;
+    padding:5px;
+}
+.cart td a{
+    color:cadetblue;
+}
+
+.remove-from-cart-link {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 14px; /* Adjust font size */
+    color: #007bff; /* Change to your desired text color */
+    text-decoration: underline; /* Underline the text to make it look like a link */
+    cursor: pointer;
+}
+.cart .remove-btn {
+    background-color: #ff0000; /* Change to your desired background color */
+    color: #ffffff; /* Change to your desired text color */
+    padding: 10px 15px; /* Adjust padding as needed */
+    border: none;
+    cursor: pointer;
+    font-size: 16px; /* Adjust font size */
+}
+
+.cart .edit-btn{
+    color:cadetblue;
+    text-decoration: none;
+    font-size:15px;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+}
+
+.cart .product-info p{
+     margin:3px;
+}
+
+.cart-total{
+    display:flex;
+    justify-content: flex-end;
+}
+.cart-total table{
+    width: 100%;
+    max-width: 500px;
+    border-top: 3px solid cadetblue;
+
+}
+td::last-child{
+    text-align: right;
+}
+th:last-child{
+    text-align: right;
+}
+
+.chekout-container{
+    display:flex;
+    justify-content: flex-end;
+}
+
+.checkout-btn{
+    
+    background-color: cadetblue;
+    color:#fff;
+}
+/*Login*/
+
+#login-form{
+   width: 50%;
+   margin:5px auto;
+   text-align: center;
+   padding:20px;
+   border-top: 1px solid cadetblue;
+}
+
+#login-form input{
+    width: 50%;
+    margin: 5px auto;
+
+}
+
+#login-form #login-btn{
+    background-color: cadetblue;
+    color:#fff;
+}
+
+#login-form #register-url{
+    color:cadetblue;
+}
+
+
+.show-password {
+    margin-left: 8px;
+ }
+ .show-password {
+    text-align: justify;
+ }
+
+/* Register */
+#register-form{
+    width: 50%;
+    margin:5px auto;
+    text-align: center;
+    padding:20px;
+    border-top: 1px solid cadetblue;
+ }
+
+#register-form input{
+    width: 50%;
+    margin: 5px auto;
+}
+
+#register-form #register-btn{
+    background-color: cadetblue;
+    color:#fff;
+}
+
+#register-form #login-url{
+    color:cadetblue;
+}
+ 
+/*Account*/
+#account-form{
+    width: 50%;
+    margin:35px auto;
+    text-align: left;
+    padding: 20px;
+}
+#account-form input{
+    margin:5px auto;
+}
+
+
+#account-form #change-pass-btn {
+    background-color: cadetblue;
+    color: #fff;
+}
+
+.account-info #orders-btn,
+.account-info #logout-btn {
+    color: cadetblue;
+    text-decoration: none;
+}
+
+/*Orders*/
+.orders table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.orders th {
+    text-align: center;
+    padding: 5px 10px;
+    color: #fff;
+    background-color: cadetblue;
+}
+
+.orders td {
+    padding: 10px 20px;
+}
+
+.orders .product-info img {
+    max-width: 100%;
+    height: auto;
+    width: 80px; 
+    max-height: 80px;
+    margin-right: 10px;
+}
+
+/*Checkout*/
+#checkout-form .checkout-small-element{
+    display: inline-block;
+    width: 48%;
+    margin:10px auto;
+}
+
+#checkout-form .checkout-large-element{
+    width: 95%;
+
+}
+#checkout-form .checkout-btn-container{
+    margin: 10px;
+    text-align: right;
+    margin-right: 40px;
+    
+}
+#checkout-form #checkout-btn{
+    color:#fff;
+    background-color: cadetblue;
+}
+.product-image {
+    height: 200px; /* Set the desired height for your product images */
+    object-fit: cover; /* Ensure the image covers the entire container */
+    width: 100%; /* Make sure the width is 100% to maintain aspect ratio */
+}
+
+.account-info {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.account-info p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.account-info span {
+    font-weight: bold;
+    color: #007bff;
+}
+.featured-product-image {
+    height: 200px; /* Set the desired height for your featured product images */
+    object-fit: cover; /* Ensure the image covers the entire container */
+    width: 100%; /* Make sure the width is 100% to maintain aspect ratio */
+}
+
