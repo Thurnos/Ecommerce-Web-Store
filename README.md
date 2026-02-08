@@ -1,220 +1,286 @@
-# Medical Record System
+Ecommerce Web Store
 
-## Overview
+A full-stack PHP-based Ecommerce Web Application implementing core online store functionality including product browsing, shopping cart, authentication, checkout, and payment flow. The system follows a modular structure with database-backed persistence and session-based state management.
 
-Medical Record System is a full-stack Spring Boot web application
-designed to manage patient medical data, medical records, and
-healthcare-related entities. The system follows a layered architecture
-and exposes RESTful APIs for structured data manipulation while
-supporting server-side rendering for web interaction.
+Overview
 
-This project demonstrates backend engineering practices including domain
-modeling, persistence abstraction, and scalable service design.
+Ecommerce Web Store is a web-based ecommerce platform designed to simulate a real-world online shopping system. It provides full user interaction from browsing products to completing payments, while maintaining persistent order and account data through a relational database.
 
-------------------------------------------------------------------------
+The project demonstrates:
 
-## Features
+Dynamic PHP web development
 
--   RESTful API for managing medical records
--   Patient data management
--   Layered architecture (Controller → Service → Repository → Entity)
--   Spring Boot MVC web support
--   JPA/Hibernate persistence
--   MySQL/relational database integration
--   Clean domain-driven structure
--   Extensible and modular backend design
+Session-based cart architecture
 
-------------------------------------------------------------------------
+Database-driven ecommerce logic
 
-## Technology Stack
+Authentication & user management
 
-**Backend** - Java - Spring Boot - Spring MVC - Spring Data JPA -
-Hibernate
+End-to-end checkout workflow
 
-**Database** - MySQL (or any compatible relational DB)
+Structured relational schema
 
-**Build Tool** - Maven
+Technology Stack
 
-------------------------------------------------------------------------
+Backend
 
-## Architecture
+PHP (Core PHP)
 
-The project follows a layered architecture:
+MySQL (Relational Database)
 
-Controller Layer\
-Handles HTTP requests, validates input, and returns responses.
+Frontend
 
-Service Layer\
-Contains business logic and orchestration between repositories and
-domain models.
+HTML5
 
-Repository Layer\
-Responsible for data persistence using Spring Data JPA.
+CSS3
 
-Entity Layer\
-Defines the domain model and database mapping.
+JavaScript
 
-------------------------------------------------------------------------
+Architecture Style
 
-## Project Structure
+Monolithic PHP Web App
 
-    Medical-Record/
-    │
-    ├── src/main/java/
-    │   ├── controller/       # REST and MVC controllers
-    │   ├── service/          # Business logic
-    │   ├── repository/       # Data access layer
-    │   ├── model/entity/     # JPA entities
-    │   └── MedicalRecordApplication.java
-    │
-    ├── src/main/resources/
-    │   ├── application.properties
-    │   ├── templates/
-    │   └── static/
-    │
-    └── pom.xml
+Session-based state
 
-------------------------------------------------------------------------
+Relational persistence model
 
-## Installation
+Core Features
+User System
 
-### Prerequisites
+User registration
 
--   Java 17+
--   Maven
--   MySQL (or compatible database)
+Login authentication
 
-### Clone Repository
+Account dashboard
 
-``` bash
-git clone https://github.com/Thurnos/Medical-Record.git
-cd Medical-Record
-```
+Session management
 
-### Configure Database
+Product System
 
-Edit `application.properties`:
+Product catalog
 
-    spring.datasource.url=jdbc:mysql://localhost:3306/medical_record
-    spring.datasource.username=YOUR_USERNAME
-    spring.datasource.password=YOUR_PASSWORD
-    spring.jpa.hibernate.ddl-auto=update
-    spring.jpa.show-sql=true
+Product detail page
 
-### Build Project
+Dynamic product loading from database
 
-``` bash
-mvn clean install
-```
+Shopping Cart
 
-### Run Application
+Add to cart
 
-``` bash
-mvn spring-boot:run
-```
+Remove/update cart items
 
-Application runs on:
+Session-based cart persistence
 
-    http://localhost:8080
+Checkout System
 
-------------------------------------------------------------------------
+Order creation
 
-## API Usage
+Checkout processing
 
-Example endpoints (depending on implementation):
+Payment simulation
 
-    GET     /patients
-    GET     /patients/{id}
-    POST    /patients
-    PUT     /patients/{id}
-    DELETE  /patients/{id}
+Order storage in database
 
-All responses are returned in JSON format unless rendered via MVC
-templates.
+Additional Pages
 
-------------------------------------------------------------------------
+Blog page
 
-## Database Design
+Contact page
 
-The system uses relational mapping via JPA/Hibernate. Typical entities
-may include:
+Account management
 
--   Patient
--   MedicalRecord
--   Doctor
--   Appointment
--   Diagnosis
--   Treatment
+Project Structure
+Ecommerce-Web-Store/
+│
+├── assets/                # CSS, JS, images, frontend assets
+├── server/                # Backend logic, DB connection, helpers
+│
+├── index.php              # Homepage
+├── shop.php               # Product catalog
+├── single_product.php     # Product details
+├── cart.php               # Shopping cart
+├── chekout.php            # Checkout flow
+├── payment.php            # Payment processing
+├── login.php              # Login system
+├── register.php           # User registration
+├── account.php            # User dashboard
+│
+├── blog.html              # Static blog page
+├── contact.html           # Contact page
+│
+├── php_project.sql        # Database schema
 
-Relationships: - One-to-Many (Patient → Medical Records) - Many-to-One
-(Record → Doctor) - Optional relational extensions
+Database Design
 
-------------------------------------------------------------------------
+The application uses a relational database defined in php_project.sql.
 
-## Configuration
+Typical schema components:
 
-Key Spring Boot configuration:
+users – authentication & account data
 
--   `spring.jpa.hibernate.ddl-auto=update` -- auto schema management
--   `spring.jpa.show-sql=true` -- SQL debugging
--   `server.port=8080` -- default server port
+products – product catalog
 
-------------------------------------------------------------------------
+cart / order_items – cart and order mapping
 
-## Extensibility
+orders – checkout transactions
 
-The system is designed for easy expansion:
+payments – payment records
 
--   Authentication & Authorization (Spring Security, JWT)
--   Role-based access (Doctor/Admin/Patient)
--   Audit logging
--   File storage (medical scans, reports)
--   REST API documentation (Swagger/OpenAPI)
--   Microservice decomposition
--   Docker deployment
--   Cloud database integration
+Relationships
 
-------------------------------------------------------------------------
+One-to-Many → User → Orders
 
-## Build & Packaging
+One-to-Many → Order → Order Items
 
-Generate runnable JAR:
+Many-to-One → Order Item → Product
 
-``` bash
-mvn package
-java -jar target/medical-record.jar
-```
+Installation & Setup
+Requirements
 
-------------------------------------------------------------------------
+PHP 8+
 
-## Development Practices
+MySQL / MariaDB
 
--   Layered architecture
--   Separation of concerns
--   Dependency Injection
--   Repository abstraction
--   Domain-driven structure
--   Clean and maintainable codebase
+Apache / Nginx (or XAMPP / Laragon)
 
-------------------------------------------------------------------------
+1. Clone Repository
+git clone https://github.com/Thurnos/Ecommerce-Web-Store.git
+cd Ecommerce-Web-Store
 
-## Contributing
+2. Setup Database
 
-1.  Fork repository
-2.  Create feature branch
-3.  Commit changes
-4.  Push branch
-5.  Open Pull Request
+Create database:
 
-------------------------------------------------------------------------
+CREATE DATABASE ecommerce_store;
 
-## License
 
-This project is open-source and available under the MIT License.
+Import schema:
 
-------------------------------------------------------------------------
+mysql -u root -p ecommerce_store < php_project.sql
 
-## Author
+3. Configure Database Connection
 
-Developed as a backend medical record management system demonstrating
-Spring Boot, JPA, and RESTful architecture design.
+Edit database config inside:
+
+/server/
+
+
+Set:
+
+DB_HOST=localhost
+DB_USER=root
+DB_PASS=your_password
+DB_NAME=ecommerce_store
+
+4. Run Application
+
+Place project inside:
+
+htdocs/ (XAMPP)
+or
+www/ (Laragon)
+
+
+Then open:
+
+http://localhost/Ecommerce-Web-Store
+
+Application Flow
+
+User registers / logs in
+
+Browses product catalog
+
+Adds products to cart (session storage)
+
+Proceeds to checkout
+
+Order stored in database
+
+Payment simulated and recorded
+
+Security Considerations
+
+Session-based authentication
+
+Input validation required (can be extended)
+
+Password hashing recommended (bcrypt)
+
+CSRF protection can be added
+
+Prepared statements recommended for SQL queries
+
+Extensibility
+
+This project can be upgraded into a production-grade ecommerce platform by adding:
+
+MVC framework (Laravel / Symfony)
+
+Payment gateway (Stripe / PayPal)
+
+Admin dashboard
+
+Product categories & filters
+
+Inventory system
+
+JWT authentication
+
+REST API layer
+
+Docker deployment
+
+Cloud hosting
+
+Order tracking
+
+Email notifications
+
+Search & pagination
+
+Build / Deployment
+
+Deploy on:
+
+Apache / Nginx
+
+Shared hosting
+
+VPS
+
+Docker container
+
+LAMP / LEMP stack
+
+Development Practices
+
+Modular PHP structure
+
+Separation of logic & UI
+
+Database normalization
+
+Session state handling
+
+Relational modeling
+
+Contributing
+
+Fork repository
+
+Create feature branch
+
+Commit changes
+
+Push branch
+
+Open Pull Request
+
+License
+
+Open-source project. Add MIT License if distribution is intended.
+
+Author
+
+Developed as a complete PHP-based ecommerce system demonstrating full-stack web development, database architecture, and transactional workflow implementation.
